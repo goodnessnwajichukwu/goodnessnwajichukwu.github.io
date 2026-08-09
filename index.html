@@ -1,389 +1,537 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goodness Nwajichukwu - Documentation Auditor</title>
+    <title>Goodness Nwajichukwu - Developer Onboarding & Production Risk Auditor</title>
+    <meta name="description" content="Developer Onboarding & Production Risk Auditor helping API-first SaaS teams uncover onboarding assumptions before they become production risks.">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-            line-height: 1.7;
-            color: #2d3748;
-            background: #f7fafc;
-        }
-        
+        }    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+        line-height: 1.7;
+        color: #2d3748;
+        background: #f7fafc;
+    }
+    
+    header {
+        background: #fff;
+        padding: 60px 20px;
+        text-align: center;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .profile-img {
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        object-fit: cover;
+        border: 3px solid #e2e8f0;
+    }
+    
+    h1 {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #1a202c;
+    }
+    
+    .title {
+        font-size: 18px;
+        color: #4a5568;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+    
+    .subtitle {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #4a5568;
+        font-size: 16px;
+    }
+    
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    section {
+        background: #fff;
+        margin: 30px auto;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    
+    h2 {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #1a202c;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 12px;
+    }
+    
+    h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-top: 20px;
+        margin-bottom: 12px;
+        color: #2d3748;
+    }
+    
+    .intro-text {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #4a5568;
+        margin-bottom: 15px;
+    }
+    
+    .audit-item {
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #edf2f7;
+    }
+    
+    .audit-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .finding-box {
+        background: #f7fafc;
+        border-left: 4px solid #2c5282;
+        padding: 16px;
+        margin: 15px 0;
+        border-radius: 4px;
+    }
+    
+    .finding-box strong {
+        display: block;
+        color: #1a202c;
+        margin-bottom: 8px;
+    }
+    
+    .finding-box p {
+        color: #4a5568;
+        margin: 0;
+    }
+    
+    .audit-section {
+        margin: 12px 0;
+        color: #4a5568;
+    }
+    
+    .audit-section strong {
+        color: #2d3748;
+    }
+    
+    .audit-link {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 10px 16px;
+        background: #2c5282;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: 500;
+        font-size: 14px;
+        transition: background 0.2s;
+    }
+    
+    .audit-link:hover {
+        background: #1e3a5f;
+    }
+    
+    .list-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    
+    .list-column h4 {
+        font-size: 14px;
+        font-weight: 600;
+        color: #2d3748;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .list-column ul {
+        list-style: none;
+    }
+    
+    .list-column li {
+        padding: 8px 0;
+        color: #4a5568;
+        font-size: 15px;
+    }
+    
+    .list-column li:before {
+        content: "→ ";
+        color: #2c5282;
+        font-weight: 600;
+        margin-right: 8px;
+    }
+    
+    .contact-section {
+        text-align: center;
+    }
+    
+    .contact-item {
+        margin: 20px 0;
+    }
+    
+    .contact-item strong {
+        display: block;
+        color: #1a202c;
+        margin-bottom: 6px;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    
+    .contact-item a {
+        color: #2c5282;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .contact-item a:hover {
+        text-decoration: underline;
+    }
+    
+    .divider {
+        text-align: center;
+        color: #cbd5e0;
+        margin: 30px 0;
+        font-size: 20px;
+    }
+    
+    .cta-section {
+        background: #f7fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 30px;
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .cta-section p {
+        color: #4a5568;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+    
+    @media (max-width: 600px) {
         header {
-            background: #fff;
-            padding: 60px 20px;
-            text-align: center;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        
-        .profile-img {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            object-fit: cover;
-            border: 3px solid #e2e8f0;
-        }
-        
-        h1 {
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #1a202c;
-        }
-        
-        .title {
-            font-size: 18px;
-            color: #4a5568;
-            font-weight: 500;
-            margin-bottom: 20px;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
+            padding: 40px 20px;
         }
         
         section {
-            background: #fff;
-            margin: 30px auto;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            padding: 25px;
+            margin: 20px auto;
+        }
+        
+        h1 {
+            font-size: 26px;
         }
         
         h2 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            color: #1a202c;
-            border-bottom: 2px solid #edf2f7;
-            padding-bottom: 12px;
-        }
-        
-        h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-top: 20px;
-            margin-bottom: 12px;
-            color: #2d3748;
-        }
-        
-        .intro-text {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #4a5568;
-            margin-bottom: 15px;
-        }
-        
-        .audit-item {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #edf2f7;
-        }
-        
-        .audit-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-        
-        .finding-box {
-            background: #f7fafc;
-            border-left: 4px solid #2c5282;
-            padding: 16px;
-            margin: 15px 0;
-            border-radius: 4px;
-        }
-        
-        .finding-box strong {
-            display: block;
-            color: #1a202c;
-            margin-bottom: 8px;
-        }
-        
-        .finding-box p {
-            color: #4a5568;
-            margin: 0;
-        }
-        
-        .audit-section {
-            margin: 12px 0;
-            color: #4a5568;
-        }
-        
-        .audit-section strong {
-            color: #2d3748;
-        }
-        
-        .audit-link {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 10px 16px;
-            background: #2c5282;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 500;
-            font-size: 14px;
-            transition: background 0.2s;
-        }
-        
-        .audit-link:hover {
-            background: #1e3a5f;
-        }
-        
-        .list-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        
-        .list-column h4 {
-            font-size: 14px;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .list-column ul {
-            list-style: none;
-        }
-        
-        .list-column li {
-            padding: 8px 0;
-            color: #4a5568;
-            font-size: 15px;
-        }
-        
-        .list-column li:before {
-            content: "→ ";
-            color: #2c5282;
-            font-weight: 600;
-            margin-right: 8px;
-        }
-        
-        .contact-section {
-            text-align: center;
-        }
-        
-        .contact-item {
-            margin: 20px 0;
-        }
-        
-        .contact-item strong {
-            display: block;
-            color: #1a202c;
-            margin-bottom: 6px;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .contact-item a {
-            color: #2c5282;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .contact-item a:hover {
-            text-decoration: underline;
-        }
-        
-        .divider {
-            text-align: center;
-            color: #cbd5e0;
-            margin: 30px 0;
             font-size: 20px;
         }
         
-        .cta-section {
-            background: #f7fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 30px;
-            text-align: center;
-            margin: 20px 0;
+        .list-section {
+            grid-template-columns: 1fr;
+            gap: 15px;
         }
         
-        .cta-section p {
-            color: #4a5568;
-            margin-bottom: 15px;
-            font-size: 15px;
+        .profile-img {
+            width: 120px;
+            height: 120px;
         }
-        
-        @media (max-width: 600px) {
-            header {
-                padding: 40px 20px;
-            }
-            
-            section {
-                padding: 25px;
-                margin: 20px auto;
-            }
-            
-            h1 {
-                font-size: 26px;
-            }
-            
-            h2 {
-                font-size: 20px;
-            }
-            
-            .list-section {
-                grid-template-columns: 1fr;
-                gap: 15px;
-            }
-            
-            .profile-img {
-                width: 120px;
-                height: 120px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <img src="https://github.com/goodnessnwajichukwu/portfolio/blob/bcc11365526f072362dda94bca517f62c1a866c6/file_000000002324720aa036544663f3c279_1.png?raw=true" alt="Goodness Nwajichukwu" class="profile-img">
-        <h1>Nwajichukwu Goodness</h1>
-        <p class="title">Developer Documentation & Onboarding Auditor</p>
-    </header>
+    }
+</style>
 
-    <div class="container">
-        <section>
-            <p class="intro-text">I identify documentation-induced assumptions that become expensive during implementation and production.</p>
-            <p class="intro-text">I audit API documentation, developer onboarding flows, authentication guides, SDKs, and implementation guides to uncover where documentation teaches mental models that later require architectural rework, increase operational complexity, or slow developer adoption.</p>
-        </section>
+</head><body><header>
+    <img src="https://github.com/goodnessnwajichukwu/portfolio/blob/bcc11365526f072362dda94bca517f62c1a866c6/file_000000002324720aa036544663f3c279_1.png?raw=true" alt="Goodness Nwajichukwu" class="profile-img">
 
-        <section>
-            <h2>Selected Public Documentation Audits</h2>
-            <p class="intro-text">These audits analyze publicly available developer documentation. Each finding is supported by evidence from the documentation and focuses on onboarding assumptions that can create implementation and operational risk.</p>
+    <h1>Nwajichukwu Goodness</h1>
 
-            <div class="audit-item">
-                <h3>Liveblocks</h3>
-                
-                <div class="finding-box">
-                    <strong>Finding</strong>
-                    <p>The Concepts onboarding presents project environment selection as a setup attribute but does not emphasize that it establishes an irreversible architectural boundary.</p>
-                </div>
+    <p class="title">
+        Developer Onboarding & Production Risk Auditor
+    </p>
 
-                <div class="audit-section">
-                    <strong>Documentation-Induced Assumption</strong><br>
-                    Developers can reasonably interpret environment selection as ordinary project configuration rather than a long-term architectural decision. The consequence only becomes apparent when a team later attempts to promote a Development project to production and discovers the environment cannot be changed.
-                </div>
+    <p class="subtitle">
+        Helping API-first SaaS teams uncover onboarding assumptions before they become production risks | Founder, DaxMac
+    </p>
+</header>
 
-                <div class="audit-section">
-                    <strong>Business Impact</strong><br>
-                    Correcting the mistake requires creating a new project and updating deployment workflows, increasing engineering effort, operational overhead, and potentially delaying production rollout.
-                </div>
+<div class="container">
 
-                <a href="https://daxmac-lab.github.io/daxmac/audits/liveblocks.html" class="audit-link">View Full Audit</a>
+    <section>
+
+        <p class="intro-text">
+            I identify the assumptions a first-time developer can reasonably make while following an API product's onboarding flow.
+        </p>
+
+        <p class="intro-text">
+            I audit documentation, quickstarts, authentication flows, SDKs, dashboards, and implementation paths to find where those assumptions can remain invisible during onboarding but create problems later in production.
+        </p>
+
+        <p class="intro-text">
+            The work is not about judging documentation quality or rewriting docs. It is about exposing the gap between what a developer can reasonably believe during onboarding and what can actually happen when the integration reaches a real production environment.
+        </p>
+
+    </section>
+
+    <section>
+
+        <h2>Selected Public Documentation Audits</h2>
+
+        <p class="intro-text">
+            These audits analyze publicly available developer documentation and onboarding flows. Each finding starts with a reasonable developer assumption and follows it to the point where that assumption can create implementation or production friction.
+        </p>
+
+        <div class="audit-item">
+
+            <h3>Liveblocks</h3>
+
+            <div class="finding-box">
+
+                <strong>Finding</strong>
+
+                <p>
+                    Organization context can drift between authentication and resource creation, creating a risk that resources are created under a different organizational context than the authenticated user.
+                </p>
+
             </div>
 
-            <div class="audit-item">
-                <h3>Svix</h3>
-                
-                <div class="finding-box">
-                    <strong>Finding</strong>
-                    <p>The documentation recommends creating one application per user but does not explain that the application establishes the operational boundary for endpoint management and message history.</p>
-                </div>
+            <div class="audit-section">
 
-                <div class="audit-section">
-                    <strong>Documentation-Induced Assumption</strong><br>
-                    Developers can reasonably treat the application as an organizational container rather than a long-term architectural boundary. The assumption becomes costly when endpoint management and operational history need to exist at a different scope than originally modeled.
-                </div>
+                <strong>Developer Assumption</strong><br>
 
-                <div class="audit-section">
-                    <strong>Business Impact</strong><br>
-                    Correcting the application boundary after onboarding can require reorganizing webhook resources and operational workflows, increasing engineering effort, migration work, and support overhead.
-                </div>
+                A developer building a multi-tenant application may treat organizationId as something that can be resolved independently during authentication and later resource creation.
 
-                <a href="https://daxmac-lab.github.io/daxmac/audits/svix.html" class="audit-link">View Full Audit</a>
             </div>
-        </section>
 
-        <section>
-            <h2>What I Audit</h2>
-            <div class="list-section">
-                <div class="list-column">
-                    <ul>
-                        <li>API Documentation</li>
-                        <li>Developer Onboarding</li>
-                        <li>Authentication & Authorization</li>
-                    </ul>
-                </div>
-                <div class="list-column">
-                    <ul>
-                        <li>SDK Documentation</li>
-                        <li>Quickstart Guides</li>
-                        <li>Implementation Guides</li>
-                    </ul>
-                </div>
+            <div class="audit-section">
+
+                <strong>Production Risk</strong><br>
+
+                If those organization contexts become inconsistent, authentication can succeed while resources are associated with an unintended organization or become inaccessible to the users the application expects to access them.
+
             </div>
-        </section>
 
-        <section>
-            <h2>Deliverables</h2>
-            <p class="intro-text">Every audit includes:</p>
-            <div class="list-section">
-                <div class="list-column">
-                    <ul>
-                        <li>Documentation walkthrough</li>
-                        <li>Evidence-backed findings</li>
-                        <li>Documentation-induced assumptions</li>
-                    </ul>
-                </div>
-                <div class="list-column">
-                    <ul>
-                        <li>Production trigger analysis</li>
-                        <li>Business impact assessment</li>
-                        <li>Executive summary</li>
-                    </ul>
-                </div>
+            <a href="https://daxmac-lab.github.io/daxmac/audits/liveblocks.html" class="audit-link">
+                View Full Audit
+            </a>
+
+        </div>
+
+        <div class="audit-item">
+
+            <h3>Svix</h3>
+
+            <div class="finding-box">
+
+                <strong>Finding</strong>
+
+                <p>
+                    Webhook acknowledgement is not the same as business processing, but the onboarding flow does not explicitly establish that distinction.
+                </p>
+
             </div>
-        </section>
 
-        <section>
-            <h2>Why This Matters</h2>
-            <p class="intro-text">Developers rarely report onboarding friction directly.</p>
-            <p class="intro-text">More often, they make reasonable implementation decisions based on the documentation, only to discover later that an important architectural boundary or operational assumption was never made explicit.</p>
-            <p class="intro-text">The result is engineering rework, longer implementation time, increased support load, and slower developer adoption.</p>
-            <p class="intro-text"><strong>My work identifies those assumptions before they become expensive to correct.</strong></p>
-        </section>
+            <div class="audit-section">
 
-        <section id="contact" class="cta">
-  <h2>Request a Documentation Audit</h2>
+                <strong>Developer Assumption</strong><br>
 
-  <p>
-    If you're responsible for developer onboarding or API adoption,
-    I'd be happy to review a documentation flow and discuss whether it
-    creates implementation or production risk.
-  </p>
-            
-        <section class="contact-section">
-            <h2>Contact</h2>
-            <div class="contact-item">
-                <strong>Email</strong>
-                <a href="mailto:nwajichukwugoodness@gmail.com">nwajichukwugoodness@gmail.com</a>
+                A developer may structure a webhook handler around completing the downstream business operation before returning a 2xx response, making acknowledgement latency dependent on business-processing latency.
+
             </div>
-            <div class="contact-item">
-                <strong>LinkedIn</strong>
-                <a href="https://www.linkedin.com/in/nwajichukwu-goodness-audits">linkedin.com/in/nwajichukwu-goodness-audits</a>
+
+            <div class="audit-section">
+
+                <strong>Production Risk</strong><br>
+
+                If downstream processing takes longer than the documented acknowledgement window, the business operation can succeed while the webhook delivery is not acknowledged as expected, creating the possibility of repeated delivery attempts and duplicate downstream work.
+
             </div>
-        </section>
-    </div>
-</body>
-  </html>
+
+            <a href="https://daxmac-lab.github.io/daxmac/audits/svix.html" class="audit-link">
+                View Full Audit
+            </a>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>What I Audit</h2>
+
+        <div class="list-section">
+
+            <div class="list-column">
+
+                <ul>
+                    <li>API Documentation</li>
+                    <li>Developer Onboarding Flows</li>
+                    <li>Authentication & Authorization</li>
+                </ul>
+
+            </div>
+
+            <div class="list-column">
+
+                <ul>
+                    <li>SDK Documentation</li>
+                    <li>Quickstart Guides</li>
+                    <li>Implementation Flows</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>What I Look For</h2>
+
+        <p class="intro-text">
+            I look for situations where the documentation is technically correct but a reasonable first-time developer can still form the wrong mental model.
+        </p>
+
+        <div class="list-section">
+
+            <div class="list-column">
+
+                <ul>
+                    <li>Hidden architectural boundaries</li>
+                    <li>Lifecycle assumptions</li>
+                    <li>Scope and tenancy assumptions</li>
+                </ul>
+
+            </div>
+
+            <div class="list-column">
+
+                <ul>
+                    <li>Production-state assumptions</li>
+                    <li>Authentication and resource mismatches</li>
+                    <li>Operational assumptions that surface later</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>How a Finding Is Built</h2>
+
+        <p class="intro-text">
+            Each finding follows the assumption rather than simply pointing out that documentation could be clearer.
+        </p>
+
+        <div class="list-section">
+
+            <div class="list-column">
+
+                <ul>
+                    <li>Documentation evidence</li>
+                    <li>Reasonable developer assumption</li>
+                    <li>Production trigger</li>
+                </ul>
+
+            </div>
+
+            <div class="list-column">
+
+                <ul>
+                    <li>What can break</li>
+                    <li>Operational or business consequence</li>
+                    <li>Scope and verification limits</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Why This Matters</h2>
+
+        <p class="intro-text">
+            Developers do not need to misunderstand documentation for onboarding to create risk.
+        </p>
+
+        <p class="intro-text">
+            Often, the developer is doing exactly what the documentation appears to suggest. The problem only becomes visible when the integration encounters a production condition that the onboarding flow did not force the developer to consider.
+        </p>
+
+        <p class="intro-text">
+            Those assumptions can surface as support tickets, implementation rework, operational incidents, delayed launches, duplicate processing, inaccessible resources, or increased infrastructure cost.
+        </p>
+
+        <p class="intro-text">
+            <strong>
+                My work is to expose those assumptions before the production environment does.
+            </strong>
+        </p>
+
+    </section>
+
+    <section id="contact" class="cta">
+
+        <h2>Request a Documentation Audit</h2>
+
+        <p class="intro-text">
+            If you're responsible for developer onboarding or API adoption, I'd be happy to review an onboarding flow and identify the assumptions a first-time developer could reasonably make before those assumptions become production risks.
+        </p>
+
+    </section>
+
+    <section class="contact-section">
+
+        <h2>Contact</h2>
+
+        <div class="contact-item">
+
+            <strong>Email</strong>
+
+            <a href="mailto:nwajichukwugoodness@gmail.com">
+                nwajichukwugoodness@gmail.com
+            </a>
+
+        </div>
+
+        <div class="contact-item">
+
+            <strong>LinkedIn</strong>
+
+            <a href="https://www.linkedin.com/in/nwajichukwu-goodness-audits">
+                linkedin.com/in/nwajichukwu-goodness-audits
+            </a>
+
+        </div>
+
+    </section>
+
+</div>
+
+</body></html>
