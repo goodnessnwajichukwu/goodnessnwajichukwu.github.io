@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="An independent, source-linked business research sample exploring potential relevance for DaxMac.">
+  <title>DaxMac Business Research Sample | Goodness Nwajichukwu</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #131c30;
+      --text: #f4f7ff;
+      --muted: #aab5ca;
+      --blue: #91aaff;
+      --green: #75e0b1;
+      --border: #29344b;
+      --amber: #f4d18a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    a { color: var(--blue); overflow-wrap: anywhere; }
+    .container { width: min(1120px, 91%); margin: auto; }
+    nav { padding: 18px 0; border-bottom: 1px solid var(--border); background: var(--bg); }
+    .nav-inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .logo { color: var(--text); text-decoration: none; font-size: 17px; font-weight: 800; }
+    .logo span { color: var(--blue); }
+    .nav-links { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; }
+    .nav-links a { color: var(--muted); text-decoration: none; }
+    .nav-links a:hover { color: var(--green); }
+    .hero { padding: 66px 0 48px; background: radial-gradient(ellipse at top right, #1a2850, var(--bg) 65%); }
+    .label { color: var(--green); text-transform: uppercase; letter-spacing: 1.8px; font-size: 11px; font-weight: 800; }
+    h1 { max-width: 850px; font-size: clamp(34px, 6vw, 58px); line-height: 1.12; letter-spacing: -1.6px; margin: 16px 0; }
+    h1 span { color: var(--blue); }
+    .hero p { max-width: 780px; color: var(--muted); font-size: 16px; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 23px; }
+    .btn { display: inline-block; padding: 11px 16px; border-radius: 7px; font-weight: 700; font-size: 13px; text-decoration: none; }
+    .btn-primary { background: var(--blue); color: #0b1020; }
+    .btn-secondary { border: 1px solid var(--border); color: var(--text); }
+    .notice { margin-top: 25px; padding: 15px 17px; border: 1px solid #685632; border-radius: 9px; background: #211d17; color: #f4dfb4; font-size: 13px; }
+    section { padding: 48px 0; }
+    h2 { font-size: clamp(25px, 4vw, 36px); line-height: 1.2; margin: 10px 0 13px; }
+    h3 { font-size: 18px; margin-bottom: 8px; }
+    .intro { max-width: 800px; color: var(--muted); font-size: 14px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin-top: 25px; }
+    .stat, .card { padding: 20px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; }
+    .stat strong { display: block; color: var(--blue); font-size: 25px; margin-bottom: 4px; }
+    .stat span { color: var(--muted); font-size: 12px; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 24px; }
+    .card p, .card li { color: var(--muted); font-size: 13px; }
+    .card ul { padding-left: 18px; margin-top: 10px; }
+    .table-shell { margin-top: 23px; overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; background: var(--card); }
+    table { border-collapse: collapse; width: 100%; min-width: 900px; }
+    th, td { padding: 14px 15px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--border); font-size: 12px; }
+    th { background: #18243d; color: var(--blue); position: sticky; top: 0; }
+    td { color: var(--muted); }
+    tbody tr:last-child td { border-bottom: 0; }
+    td strong { color: var(--text); }
+    .tag { display: inline-block; padding: 3px 7px; border-radius: 4px; background: #263657; color: var(--blue); font-size: 10px; white-space: nowrap; }
+    .caution { padding: 17px; border-left: 3px solid var(--green); background: #101b27; border-radius: 0 8px 8px 0; margin-top: 20px; color: var(--muted); font-size: 13px; }
+    .company { margin-top: 16px; }
+    .company h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
+    .company p { margin-top: 8px; }
+    .company .meta { color: var(--blue); font-size: 12px; }
+    .method { counter-reset: item; margin-top: 20px; }
+    .method-item { padding: 16px 0; border-bottom: 1px solid var(--border); }
+    .method-item:last-child { border-bottom: 0; }
+    .method-item strong { display: block; margin-bottom: 4px; }
+    .method-item p { color: var(--muted); font-size: 13px; }
+    .contact { padding: 30px; background: var(--card); border: 1px solid var(--border); border-radius: 13px; }
+    footer { border-top: 1px solid var(--border); margin-top: 30px; padding: 23px 0; color: var(--muted); font-size: 12px; }
+    footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+    @media (max-width: 720px) {
+      .nav-inner { align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 13px; }
+      .hero { padding: 48px 0 35px; }
+      .stats, .grid { grid-template-columns: 1fr; }
+      section { padding: 38px 0; }
+      .stat { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Goodness<span>.</span> Research</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#overview">Overview</a>
+        <a href="#research">Research Sheet</a>
+        <a href="#method">Method</a>
+        <a href="#limitations">Limitations</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="label">Independent Research Sample</span>
+      <h1>Business prospect research:<br><span>Potential fit for DaxMac</span></h1>
+      <p>
+        A structured desk-research exercise examining developer-facing companies whose products require customers to configure, integrate, authenticate, deploy, or manage technical workflows. The aim is to identify plausible prospects for further qualification—not to assume that a company has a problem or is ready to buy.
+      </p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#research">Explore the research</a>
+        <a class="btn btn-secondary" href="index.html">Back to portfolio home</a>
+      </div>
+      <div class="notice">
+        <strong>Research status:</strong> This page is a structured sample based on official public product and documentation pages. Source links are provided for follow-up verification. Product details, current workflows, company fit, and prospect priorities must be checked before this is used for commercial outreach. It is not commissioned client work or a completed DaxMac implementation review.
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview">
+      <div class="container">
+        <span class="label">01 / Project overview</span>
+        <h2>Research objective</h2>
+        <p class="intro">
+          Build an initial, evidence-linked list of companies whose products have meaningful customer-side implementation work. Use public documentation to understand what a developer must configure or connect, then record why an independent implementation review might be relevant.
+        </p>
+        <div class="stats">
+          <div class="stat"><strong>10</strong><span>Research entries included in the initial working sheet</span></div>
+          <div class="stat"><strong>Official</strong><span>Company and product documentation prioritized as sources</span></div>
+          <div class="stat"><strong>Hypothesis</strong><span>Commercial fit remains to be validated with further evidence</span></div>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Research question</h3>
+            <p>Which developer-facing products expose customer implementation responsibilities that could reasonably benefit from an independent, evidence-backed review?</p>
+          </article>
+          <article class="card">
+            <h3>Selection signals</h3>
+            <p>API or SDK setup, authentication and credential configuration, integrations across systems, deployment steps, and decisions customers must make before verifying a working result.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+        <span class="label">02 / Prospect research</span>
+        <h2>Initial company research sheet</h2>
+        <p class="intro">
+          The table is designed to capture product facts, public evidence, a cautious relevance hypothesis, and the next research action. A plausible fit is not proof of customer pain, buying intent, or budget.
+        </p>
+
+        <div class="table-shell">
+          <table>
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Product area</th>
+                <th>Publicly visible implementation work</th>
+                <th>Potential relevance to DaxMac</th>
+                <th>Official sources</th>
+                <th>Next research action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Composio</strong><br><a href="https://composio.dev/" target="_blank" rel="noopener noreferrer">composio.dev</a></td>
+                <td>AI agent integrations, connected accounts, tool execution</td>
+                <td>Developers work with tool discovery, authentication, connected accounts, and execution workflows.</td>
+                <td>An outside review could examine whether the first successful authenticated tool action is clearly connected across the setup steps.</td>
+                <td><a href="https://docs.composio.dev/" target="_blank" rel="noopener noreferrer">Official docs</a><br><a href="https://docs.composio.dev/reference" target="_blank" rel="noopener noreferrer">API reference</a></td>
+                <td>Trace one official quickstart and list prerequisites, credentials, account-connection steps, and success signals.</td>
+              </tr>
+              <tr>
+                <td><strong>Clerk</strong><br><a href="https://clerk.com/" target="_blank" rel="noopener noreferrer">clerk.com</a></td>
+                <td>Authentication and user-management SDKs</td>
+                <td>Setup involves creating an application, choosing providers or identifiers, integrating a framework-specific SDK, and configuring environment variables.</td>
+                <td>A review could examine how dashboard choices, credentials, code changes, and production configuration fit together.</td>
+                <td><a href="https://clerk.com/docs/getting-started/quickstart/overview" target="_blank" rel="noopener noreferrer">Quickstart overview</a><br><a href="https://clerk.com/docs/guides/development/clerk-environment-variables" target="_blank" rel="noopener noreferrer">Environment variables</a></td>
+                <td>Follow one framework quickstart and compare its local setup with the environment and production guidance.</td>
+              </tr>
+              <tr>
+                <td><strong>ZITADEL</strong><br><a href="https://zitadel.com/" target="_blank" rel="noopener noreferrer">zitadel.com</a></td>
+                <td>Identity and application authentication</td>
+                <td>Getting started can involve creating an organization, project, and application, collecting credentials, and configuring an authentication flow.</td>
+                <td>The handoff between console configuration and application code is a concrete area to inspect for assumptions and responsibilities.</td>
+                <td><a href="https://zitadel.com/docs/guides/start/quickstart" target="_blank" rel="noopener noreferrer">Quickstart</a><br><a href="https://zitadel.com/docs/guides/manage/console/applications-overview" target="_blank" rel="noopener noreferrer">Application overview</a></td>
+                <td>Trace one framework-specific path from account creation to a working local app; record every required value and verification step.</td>
+              </tr>
+              <tr>
+                <td><strong>Northflank</strong><br><a href="https://northflank.com/" target="_blank" rel="noopener noreferrer">northflank.com</a></td>
+                <td>Cloud deployment and developer infrastructure</td>
+                <td>Its product surface covers services, jobs, databases, environments, domains, and deployment operations.</td>
+                <td>A narrow deployment workflow could be reviewed to see whether prerequisites, configuration ownership, and completion checks are easy to follow.</td>
+                <td><a href="https://northflank.com/docs" target="_blank" rel="noopener noreferrer">Official documentation</a></td>
+                <td>Choose one task, such as deploying a service from Git and connecting a domain; map the steps through verification.</td>
+              </tr>
+              <tr>
+                <td><strong>Convex</strong><br><a href="https://convex.dev/" target="_blank" rel="noopener noreferrer">convex.dev</a></td>
+                <td>Backend platform, TypeScript SDKs, client libraries, CLI</td>
+                <td>Developers work across backend functions, schemas, client APIs, local development, and deployment workflows.</td>
+                <td>A review could map which tasks are handled by the platform and which remain the application's responsibility.</td>
+                <td><a href="https://docs.convex.dev/api" target="_blank" rel="noopener noreferrer">API documentation</a></td>
+                <td>Choose one supported framework and trace the path from local setup to deployment, recording assumptions and verification steps.</td>
+              </tr>
+              <tr>
+                <td><strong>Auth0</strong><br><a href="https://auth0.com/" target="_blank" rel="noopener noreferrer">auth0.com</a></td>
+                <td>Authentication APIs, SDKs, identity platform</td>
+                <td>Developers select an application or framework pattern, configure credentials, and integrate SDK-specific instructions.</td>
+                <td>Credential handling and the division of work between frontend, backend, and identity configuration offer possible review questions.</td>
+                <td><a href="https://auth0.com/docs" target="_blank" rel="noopener noreferrer">Official documentation</a></td>
+                <td>Review a single SDK quickstart. Treat Auth0 as a benchmark or lower-priority prospect until company fit and buyer access are assessed.</td>
+              </tr>
+              <tr>
+                <td><strong>Clerk — integrations</strong><br><a href="https://clerk.com/" target="_blank" rel="noopener noreferrer">clerk.com</a></td>
+                <td>Authentication integrations</td>
+                <td>Integration guides cover ways to connect authentication with frameworks, databases, and other application tools.</td>
+                <td>A specific integration may reveal handoffs between two systems and which side owns configuration or validation.</td>
+                <td><a href="https://clerk.com/docs" target="_blank" rel="noopener noreferrer">Official documentation</a></td>
+                <td>Select one named integration and document the setup tasks required in each system. This is a separate research angle on the same company, not an additional prospect.</td>
+              </tr>
+              <tr>
+                <td><strong>Composio — API workflow</strong><br><a href="https://composio.dev/" target="_blank" rel="noopener noreferrer">composio.dev</a></td>
+                <td>REST API and SDK workflows</td>
+                <td>Public references cover API authentication, toolkits, connected accounts, and related integration concepts.</td>
+                <td>A review could test whether a developer can identify the minimum sequence needed for one successful authenticated action.</td>
+                <td><a href="https://docs.composio.dev/reference" target="_blank" rel="noopener noreferrer">API reference</a></td>
+                <td>Trace one documented action from setup through execution and capture required inputs and expected output. This is a second research angle, not a new company.</td>
+              </tr>
+              <tr>
+                <td><strong>Clerk — application setup</strong><br><a href="https://clerk.com/" target="_blank" rel="noopener noreferrer">clerk.com</a></td>
+                <td>Application creation and configuration</td>
+                <td>Setup guidance covers creating an application, selecting options, and integrating authentication into an application.</td>
+                <td>The relationship between dashboard decisions and code changes is a specific workflow to examine.</td>
+                <td><a href="https://clerk.com/docs" target="_blank" rel="noopener noreferrer">Official documentation</a></td>
+                <td>For one framework, separate dashboard tasks, code tasks, credentials, and the signal that setup succeeded. This is a repeated company entry for a distinct angle.</td>
+              </tr>
+              <tr>
+                <td><strong>ZITADEL — app configuration</strong><br><a href="https://zitadel.com/" target="_blank" rel="noopener noreferrer">zitadel.com</a></td>
+                <td>Application types and authentication flows</td>
+                <td>Documentation distinguishes application types and authentication patterns for different use cases.</td>
+                <td>A review could examine whether the decision points and required settings are clear for a specific application type.</td>
+                <td><a href="https://zitadel.com/docs/guides/manage/console/applications-overview" target="_blank" rel="noopener noreferrer">Application overview</a></td>
+                <td>Compare the instructions for a browser app and a machine-to-machine API; document decision points and verification. This is a repeated company entry for a distinct angle.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="caution">
+          <strong>Data-quality note:</strong> The 10 rows above represent research angles, not 10 distinct companies. The initial working list currently covers six unique companies, with repeated entries used to examine separate product workflows. For a genuine prospecting deliverable, expand this to 10 distinct companies and verify current company size, decision-maker access, and any direct evidence of customer friction.
+        </div>
+      </div>
+    </section>
+
+    <section id="method">
+      <div class="container">
+        <span class="label">03 / Research method</span>
+        <h2>How the research should be completed</h2>
+        <p class="intro">The workflow below separates what the source says from what the researcher infers.</p>
+
+        <div class="method">
+          <div class="method-item">
+            <strong>1. Confirm the product and user</strong>
+            <p>Use official company and product pages to establish what the product does and who it is designed for.</p>
+          </div>
+          <div class="method-item">
+            <strong>2. Trace one implementation path</strong>
+            <p>Follow an official guide from prerequisites to a working result. Record required configuration, credentials, external dependencies, and verification steps.</p>
+          </div>
+          <div class="method-item">
+            <strong>3. Record evidence precisely</strong>
+            <p>Link to the specific page supporting each product fact. Do not treat a general documentation homepage as evidence for a detailed claim if a more specific page exists.</p>
+          </div>
+          <div class="method-item">
+            <strong>4. Separate fact from hypothesis</strong>
+            <p>Describe the implementation work visible in the docs as a fact. Describe potential DaxMac relevance as a hypothesis that needs further qualification.</p>
+          </div>
+          <div class="method-item">
+            <strong>5. Check for customer-friction evidence</strong>
+            <p>Look separately for recent public developer reports, issues, or discussions. Record the date and context; a single report is a lead, not proof of a widespread problem.</p>
+          </div>
+          <div class="method-item">
+            <strong>6. Qualify the commercial opportunity</strong>
+            <p>Check company size, likely buyer, product fit, and whether an independent review would plausibly inform a real product or engineering decision. Do not infer budget or willingness to pay from technical complexity alone.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="limitations">
+      <div class="container">
+        <span class="label">04 / Limitations and next steps</span>
+        <h2>What this sample does—and does not—show</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>What it demonstrates</h3>
+            <ul>
+              <li>Structured collection of public company information.</li>
+              <li>Use of official sources and documentation.</li>
+              <li>Identification of customer-side implementation responsibilities.</li>
+              <li>Clear separation of evidence and commercial hypotheses.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>What is not established yet</h3>
+            <ul>
+              <li>That any listed company has a specific implementation problem.</li>
+              <li>That a problem is widespread, unresolved, or costly.</li>
+              <li>That a company is actively looking for DaxMac's service.</li>
+              <li>That the source links and all current product details have been re-verified for publication.</li>
+            </ul>
+          </article>
+        </div>
+        <div class="caution">
+          <strong>Next deliverable:</strong> verify each source, replace repeated company entries with additional distinct companies, and create three deeper workflow investigations. Add direct customer-friction evidence only where it can be located and dated. Keep the sample labelled as independent desk research—not client work or a live implementation test.
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="contact">
+          <span class="label">Research portfolio</span>
+          <h2>Need organized business research?</h2>
+          <p class="intro">
+            For a clearly scoped research task, contact Goodness to discuss the objective, required fields, source expectations, and deadline before work begins.
+          </p>
+          <div class="buttons">
+            <a class="btn btn-primary" href="https://wa.me/2348168433806?text=Hello%20Goodness%2C%20I%20found%20your%20research%20portfolio%20and%20would%20like%20to%20discuss%20a%20research%20task." target="_blank" rel="noopener noreferrer">Discuss a research task</a>
+            <a class="btn btn-secondary" href="index.html">Back to home page</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span>&copy; <span id="year"></span> Goodness Nwajichukwu</span>
+      <span>Independent Online Research Support</span>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
